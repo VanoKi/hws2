@@ -3,8 +3,8 @@ import Greeting from './Greeting'
 import { UserType } from './HW3'
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: UserType[] // need to fix any
+    addUserCallback: (name: string) => void // need to fix any
 }
 
 export const pureAddUser = (name: any, setError: any, setName: any, addUserCallback: any) => {
@@ -29,9 +29,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [name, setName] = useState<any>('') // need to fix any
     const [error, setError] = useState<any>('') // need to fix any
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('some name') // need to fix
-
+    const setNameCallback = (e: ChangeEvent<HTMLElement>) => { // need to fix any
+        setName(e) // need to fix
         error && setError('')
     }
     const addUser = () => {
