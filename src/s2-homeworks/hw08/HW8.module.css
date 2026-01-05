@@ -5,6 +5,18 @@
 }
 
 .users {
+  display: table !important;
+  width: 100%;
+}
+
+.users tr {
+  display: table-row !important;
+}
+.users td,
+.users th {
+  display: table-cell;
+  font-size: 16px;
+  color: black;
 }
 
 .buttonsContainer {
